@@ -1,5 +1,7 @@
 def add(a, b):
     return a + b
+def power(a, b):
+    return a ** b
 
 
 def subtract(a, b):
@@ -19,7 +21,7 @@ def divide(a, b):
 print("=== CALCULATOR ===")
 
 a = float(input("Enter first number: "))
-operator = input("Enter operation (+, -, *, /): ")
+operator = input("Enter operation (+, -, *, /, ^,**): ")
 b = float(input("Enter second number: "))
 
 if operator == "+":
@@ -30,6 +32,8 @@ elif operator == "*":
     result = multiply(a, b)
 elif operator == "/":
     result = divide(a, b)
+elif operator == "^" or operator == "**":
+    result = power(a, b)
 else:
     result = "Invalid operation"
 
